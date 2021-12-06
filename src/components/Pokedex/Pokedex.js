@@ -68,8 +68,8 @@ const Pokedex = props => {
         <>
         <AppBar position="static" className={classes.tul}>
             <Toolbar >
-                <div className={classes.searchContainer}>
-                <Grid>
+                <div className={classes.searchContainer} data-testid="test1">
+                <Grid data-testid="test3">
                     <Typography variant="h1" > Pokedex </Typography>
                     <SearchIcon className={classes.searchIcon}/>
                     <TextField 
@@ -85,7 +85,7 @@ const Pokedex = props => {
             </Toolbar>
         </AppBar>
         {pokemonData ? (
-        <Grid container spacing={2} className={classes.pokedexContainer}>
+        <Grid data-testid="test2" container spacing={2} className={classes.pokedexContainer}>
            {
                Object.keys(pokemonData).map(pokemonId=>
                 pokemonData[pokemonId].name.includes(filter) &&

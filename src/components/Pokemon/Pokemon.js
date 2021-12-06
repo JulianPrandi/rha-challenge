@@ -66,8 +66,8 @@ const Pokemon = props => {
                         return <Typography key={name}>{`${name}`}</Typography>
                     })}
                     <Button variant="contained" onClick={() => history.push("/")}>
-                    back to pokedex
-                    </Button>
+                back to pokedex
+                </Button>
             </CardContent>  
             </Card>
             </Box>
